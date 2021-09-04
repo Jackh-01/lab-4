@@ -1,4 +1,4 @@
-#include "funciones.h"
+#include "Funciones.h"
 int main()
 {
     //Creacion de la matriz final

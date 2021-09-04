@@ -6,7 +6,7 @@ string lectura()
     cout << "\n\n\tIngrese el nombre del documento con la informacion de la red de enrrutadores\n\n--> ";cin >> nombre;
     name = "./" + nombre + ".txt";
     fstream prueba (name.c_str(), fstream::in);
-    if (prueba.fail() == 1) name = "../lab_4/" + nombre + ".txt";
+    if (prueba.fail() == 1) name = "../lab-4/" + nombre + ".txt";
     prueba.close();
     return name;
 }
@@ -104,7 +104,7 @@ map<string, map<string, int> > eliminar(string nodo, map<string, map<string, int
     while (ava == true){
         cout << "\n\n\tQue desea realizar ?\n\n";
         cout << "\t1) Eliminar todo un nodo\n";
-        cout << "\t2) Eliminar solo la coneccion de dos nodos\n";
+        cout << "\t2) Eliminar solo la conexion de dos nodos\n";
         cout << "\n ---> "; cin >> conti;
 
         switch (conti) {
@@ -163,7 +163,7 @@ map<string, map<string, int> > crear(string nodo, map<string, map<string, int> >
 {
     string name = "0";
     int valor = 0;
-    cout << "\n\nIngrese los nombres de las conecciones del nuevo nodo, junto con su valor";
+    cout << "\n\nIngrese los nombres de las conexiones del nuevo nodo, junto con su valor";
     cout << "\n(Cuando ingrese -1, como valor, dejara de resibir datos)";
 
     while (valor != -1){
@@ -278,12 +278,12 @@ map<string, map<string, int> > modificar(string nodo, map<string, map<string, in
 
             bool esta = false;
             while (esta == false){
-                cout << "\n\n\tIngrese el nombre del nodo a modificar coneccion\n\n --> ";cin >> cambio;
+                cout << "\n\n\tIngrese el nombre del nodo a modificar conexion\n\n --> ";cin >> cambio;
                 for (auto var : inicial[nodo]){
                     if (var.first == cambio) esta = true;
                 }
                 if (esta == true){
-                    cout << "\n\n\tIngrese la nueva cantida de coneccion\n\n --> ";cin >> conti;
+                    cout << "\n\n\tIngrese la nueva cantida de conexion\n\n --> ";cin >> conti;
                     inicial[nodo][cambio] = conti;
                     esta = true;
                 }
